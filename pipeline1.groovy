@@ -9,7 +9,11 @@ pipeline {
         FOO = credentials("FOOcredentials")
     }
 
-    agent {Worker-Node-01}
+    agent {
+    node {
+      label 'Worker-Node-01'
+    }
+  }
 
     stages {
         stage("foo") {
